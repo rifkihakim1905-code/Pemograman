@@ -1,0 +1,127 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM9oa1ANddx6arb5Z13+4W0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rifkihakim1905-code/Pemograman/blob/main/Numpy\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tOhaaNGG4nTy",
+        "outputId": "dadfb5b2-0c4e-4325-c606-bf1676662c18"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[ 1  2  3  4]\n",
+            " [ 5 66  7  8]]\n",
+            "[[1 2]\n",
+            " [3 4]\n",
+            " [5 6]]\n",
+            "[1 2 3 4 5 6]\n",
+            "[[[ 0  1  2]\n",
+            "  [ 3  4  5]\n",
+            "  [ 6  7  8]\n",
+            "  [ 9 10 11]]\n",
+            "\n",
+            " [[12 13 14]\n",
+            "  [15 16 17]\n",
+            "  [18 19 20]\n",
+            "  [21 22 23]]]\n",
+            "[2]\n",
+            "[3 6 9]\n",
+            "Urutan: [ 0  3  6 10]\n",
+            "[[2. 2.]\n",
+            " [2. 2.]]\n",
+            "[1 2 3 4 5 6]\n",
+            "Arr1 asli: [1 2 3 4 5]\n",
+            "Arr1 baru: [1 2 9 9 9 3 4 5]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "import pandas as pd\n",
+        "\n",
+        "#NO. 1\n",
+        "data =  np.array([[1, 2, 3, 4], [5, 66, 7, 8]])\n",
+        "print (data)\n",
+        "\n",
+        "#NO. 2\n",
+        "nilai2 = np.array([[1, 2, 3], [4, 5, 6]])\n",
+        "nilaihasil = nilai2.reshape(3,2)\n",
+        "print(nilaihasil)\n",
+        "\n",
+        "arr1 = np.array([1, 2, 3])\n",
+        "arr2 = np.array([4, 5, 6])\n",
+        "hasil = np.append(arr1, arr2)\n",
+        "print(hasil)\n",
+        "\n",
+        "#NO .3\n",
+        "a = np.arange(24)\n",
+        "b = a.reshape(2, 4, 3)\n",
+        "print(b)\n",
+        "\n",
+        "#NO. 4\n",
+        "print(np.arange(2, 6, 5))\n",
+        "\n",
+        "#NO. 5\n",
+        "a = np.array([3, 6, 9])\n",
+        "print(a)\n",
+        "\n",
+        "#NO. 6\n",
+        "urutan = np.linspace(0, 10, 4, dtype=int)\n",
+        "print(\"Urutan:\", urutan)\n",
+        "\n",
+        "#NO. 7\n",
+        "A = np.array([[2, 4], [10, 12]])\n",
+        "B = np.array([[1, 2], [5, 6]])\n",
+        "C = A / B\n",
+        "print(C)\n",
+        "\n",
+        "#NO. 8\n",
+        "arr1 = np.array([1, 2, 3])\n",
+        "arr2 = np.array([4, 5, 6])\n",
+        "hasil = np.append(arr1, arr2)\n",
+        "print(hasil)\n",
+        "\n",
+        "#NO. 9\n",
+        "# Membuat array NumPy\n",
+        "arr1 = np.array([1, 2, 3, 4, 5])\n",
+        "# Menyisipkan beberapa nilai sekaligus pada indeks ke-2\n",
+        "arr1_baru = np.insert(arr1, 2, [9, 9, 9])\n",
+        "print(\"Arr1 asli:\", arr1)\n",
+        "print(\"Arr1 baru:\", arr1_baru)"
+      ]
+    }
+  ]
+}
